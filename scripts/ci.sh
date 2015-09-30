@@ -10,15 +10,15 @@ case $CIRCLE_NODE_INDEX in
   ;;
 1)
   echo "Running self-test (1): A-Com"
-  ./meteor self-test --file "^[a-b]|^c[a-n]|^co[a-m]" --exclude "$SELF_TEST_EXCLUDE"
+  ./meteor self-test --file "^[a-b]|^c[a-n]|^co[a-l]|^compiler-plugins" --exclude "$SELF_TEST_EXCLUDE"
   ;;
 2)
-  echo "Running self-test (2): Con-Li"
-  ./meteor self-test --file "^co[n-z]|^c[p-z]|^[d-k]|^l[a-i]" --exclude "$SELF_TEST_EXCLUDE"
+  echo "Running self-test (2): Con-K"
+  ./meteor self-test --file "^co[n-z]|^c[p-z]|^[d-k]" --exclude "$SELF_TEST_EXCLUDE"
   ;;
 3)
-  echo "Running self-test (3): Lj-O"
-  ./meteor self-test --file "^l[j-z]|^[m-o]" --exclude "$SELF_TEST_EXCLUDE"
+  echo "Running self-test (3): L-O"
+  ./meteor self-test --file "^[l-o]" --exclude "$SELF_TEST_EXCLUDE"
   ;;
 4)
   echo "Running self-test (4): P"
@@ -34,6 +34,6 @@ case $CIRCLE_NODE_INDEX in
   ;;
 7)
   echo "Running self-test (7): Sp-Z"
-  ./meteor self-test --file "^s[p-z]|^[t-z]" --exclude "$SELF_TEST_EXCLUDE"
+  ./meteor self-test --file "^s[p-z]|^[t-z]|^command-line" --exclude "$SELF_TEST_EXCLUDE"
   ;;
 esac
